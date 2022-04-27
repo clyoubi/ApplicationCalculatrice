@@ -1,13 +1,12 @@
 package com.smookcreative.applicationcalculatrice;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,27 +34,34 @@ public class MainActivity extends AppCompatActivity {
         if( chiffre_1 == null ){
             chiffre_1 =  ecran.getText().toString();
         }else{
+            operator = boutton.getText().toString();
             chiffre_2 =  ecran.getText().toString();
 
+            Double resultat = null;
             switch ( operator ){
                 case "x":
-                    ecran.setText( String.valueOf( Double.parseDouble(chiffre_1) * Double.parseDouble(chiffre_2) ) );
+                    resultat = Double.parseDouble(chiffre_1) * Double.parseDouble(chiffre_2);
+                    ecran.setText( String.valueOf( resultat) );
                     break;
                 case "+":
-                    ecran.setText( String.valueOf( Double.parseDouble(chiffre_1) + Double.parseDouble(chiffre_2) ) );
+                    resultat = Double.parseDouble(chiffre_1) + Double.parseDouble(chiffre_2);
+                    ecran.setText( String.valueOf( resultat) );
                     break;
                 case "-":
-                    ecran.setText( String.valueOf( Double.parseDouble(chiffre_1) - Double.parseDouble(chiffre_2) ) );
+                    resultat = Double.parseDouble(chiffre_1) - Double.parseDouble(chiffre_2);
+                    ecran.setText( String.valueOf( resultat) );
                     break;
                 case "/":
                     if( chiffre_2.equals("0")){
                         Toast.makeText(this, "Vous ne pouvez effectuer une division par zéro", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    ecran.setText( String.valueOf( Double.parseDouble(chiffre_1) / Double.parseDouble(chiffre_2) ) );
+                    resultat = Double.parseDouble(chiffre_1) / Double.parseDouble(chiffre_2);
+                    ecran.setText( String.valueOf( resultat) );
                     break;
-
             }
+            chiffre_1 = String.valueOf(resultat);
+            chiffre_2 = null;
         }
 
 

@@ -53,6 +53,7 @@
             android:layout_below="@id/ecran"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:onClick="monClickNumero"
             android:text="8" />
 
 
@@ -62,16 +63,18 @@
             android:layout_below="@id/ecran"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:onClick="monClickNumero"
             android:text="7" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:text="+"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:backgroundTint="@color/black"
-            android:onClick="monCLickFonction"/>
+            android:onClick="monCLickFonction"
+            android:text="+" />
 
         <Button
             android:layout_width="wrap_content"
@@ -85,12 +88,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
             android:layout_centerInParent="true"
-            android:text="5" />
+            android:text="5"
+            android:onClick="monClickNumero" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
             android:layout_centerInParent="true"
+            android:onClick="monClickNumero"
             android:text="4" />
         <Button
             android:layout_width="wrap_content"
@@ -105,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
             android:layout_centerInParent="true"
+            android:onClick="monClickNumero"
             android:text="3" />
 
         <Button
@@ -112,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
             android:layout_centerInParent="true"
+            android:onClick="monClickNumero"
             android:text="2" />
 
         <Button
@@ -138,6 +145,7 @@
             android:layout_below="@id/ecran"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:backgroundTint="@color/purple_200"
             android:text="-" />
 
         <Button
@@ -146,13 +154,16 @@
             android:layout_below="@id/ecran"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:onClick="monClickNumero"
             android:text="0" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/purple_200"
             android:text="." />
 
 
