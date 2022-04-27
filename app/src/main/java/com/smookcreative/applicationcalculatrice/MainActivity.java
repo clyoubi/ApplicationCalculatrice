@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void monCLickFonction(View v){
+
         Button boutton = (Button) v;
         operator = boutton.getText().toString();
 
@@ -63,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             chiffre_1 = String.valueOf(resultat);
             chiffre_2 = null;
         }
-
 
     }
 
