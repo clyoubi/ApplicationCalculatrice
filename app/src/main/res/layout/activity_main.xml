@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/project_name"
         android:gravity="end"
+        android:textColor="@color/black"
         android:hint="0"
         android:textSize="54sp" />
 
@@ -73,6 +74,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:onClick="monCLickFonction"
             android:text="+" />
 
@@ -103,6 +105,7 @@
             android:layout_below="@id/ecran"
             android:layout_centerInParent="true"
             android:text="-"
+            android:textColor="@color/white"
             android:onClick="monCLickFonction"
             android:backgroundTint="@color/black"/>
         <Button
@@ -135,6 +138,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:onClick="monCLickFonction"
             android:text="/" />
 

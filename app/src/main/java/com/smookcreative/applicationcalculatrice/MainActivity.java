@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         ecran = findViewById(R.id.ecran);
     }
 
-    private void monClickNumero(View v){
+    public void monClickNumero(View v){
         Button boutton = (Button) v;
             String texteDuBoutton = boutton.getText().toString();
                 ecran.setText( ecran.getText().toString() + texteDuBoutton );
     }
 
-    private void monCLickFonction(View v){
+    public void monCLickFonction(View v){
 
         Button boutton = (Button) v;
         operator = boutton.getText().toString();
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         if( chiffre_1 == null ){
             chiffre_1 =  ecran.getText().toString();
         }else{
+            ecran.setText("0");
             operator = boutton.getText().toString();
             chiffre_2 =  ecran.getText().toString();
 
