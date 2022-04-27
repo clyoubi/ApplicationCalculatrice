@@ -23,10 +23,10 @@
         android:id="@+id/ecran"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/project_name"
         android:gravity="end"
         android:hint="0"
-        android:textSize="54sp"
-        android:layout_below="@id/project_name"/>
+        android:textSize="54sp" />
 
 
     <GridLayout
@@ -41,9 +41,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:text="9"
-            android:onClick="monClickNumero"/>
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="monClickNumero"
+            android:text="9" />
 
         <Button
             android:id="@+id/boutton_8"
