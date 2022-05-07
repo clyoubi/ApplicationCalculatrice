@@ -13,10 +13,10 @@
         android:id="@+id/project_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CALCULATOR"
-        android:textSize="25sp"
         android:layout_marginBottom="16dp"
-        android:textColor="@android:color/black" />
+        android:text="CALCULATRICE"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
 
 
     <TextView
@@ -25,35 +25,66 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/project_name"
         android:gravity="end"
-        android:textColor="@color/black"
         android:hint="0"
-        android:textSize="54sp" />
+        android:textColor="@color/black"
+        android:textSize="54sp"
+        android:padding="10dp"
+        android:background="@color/smoke"/>
+
+
+
 
 
     <GridLayout
+        android:id="@+id/pad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:rowCount="4"
+        android:layout_alignParentBottom="true"
         android:columnCount="4"
-        android:layout_alignParentBottom="true">
+        android:rowCount="4"
+        android:useDefaultMargins="true">
+
+
+        <Button
+            android:id="@+id/boutton_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/red"
+            android:text="Clear" />
+        <Button
+            android:id="@+id/exposant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray"
+            android:onClick="monCLickFonction"
+            android:text="x^y" />
+        <Button
+            android:id="@+id/sqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/gray"
+            android:text="√" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:onClick="monCLickFonction"
+            android:text="*"
+            android:textColor="@color/white" />
+
+
 
         <Button
             android:id="@+id/boutton_9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:onClick="monClickNumero"
-            android:text="9" />
+            android:text="7" />
 
         <Button
             android:id="@+id/boutton_8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:onClick="monClickNumero"
             android:text="8" />
 
@@ -61,129 +92,99 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:onClick="monClickNumero"
-            android:text="7" />
+            android:text="9" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:backgroundTint="@color/black"
-            android:textColor="@color/white"
             android:onClick="monCLickFonction"
-            android:text="+" />
+            android:text="+"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
+            android:onClick="monClickNumero"
+            android:text="4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="monClickNumero"
+            android:text="5" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="monClickNumero"
             android:text="6" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:text="5"
-            android:onClick="monClickNumero" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:onClick="monClickNumero"
-            android:text="4" />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:text="-"
-            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
             android:onClick="monCLickFonction"
-            android:backgroundTint="@color/black"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:onClick="monClickNumero"
-            android:text="3" />
+            android:text="-"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
+            android:onClick="monClickNumero"
+            android:text="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="monClickNumero"
             android:text="2" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerInParent="true"
-            android:text="1" />
+            android:onClick="monClickNumero"
+            android:text="3" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:backgroundTint="@color/black"
-            android:textColor="@color/white"
             android:onClick="monCLickFonction"
-            android:text="/" />
+            android:text="/"
+            android:textColor="@color/white" />
 
 
         <Button
+            android:id="@+id/minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:backgroundTint="@color/purple_200"
             android:text="-" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:onClick="monClickNumero"
             android:text="0" />
 
         <Button
+            android:id="@+id/comma"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
             android:backgroundTint="@color/purple_200"
+            android:onClick="monClickNumero"
             android:text="." />
 
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ecran"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:backgroundTint="@color/teal_200"
-            android:onClick="monCLickFonction"
+            android:backgroundTint="@color/teal_700"
+            android:onClick="monCLickResult"
             android:text="=" />
 
-
     </GridLayout>
->>>>>>> origin/master
-
 
 </RelativeLayout>
